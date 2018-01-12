@@ -12,8 +12,6 @@ ENV WEB_PHP_SOCKET=127.0.0.1:9000
 
 
 COPY conf/ /opt/docker/
-COPY conf/etc/ /etc/
-
 
 RUN set -x \
     && apk-install \
