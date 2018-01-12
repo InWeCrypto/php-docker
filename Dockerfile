@@ -10,9 +10,6 @@ ENV WEB_DOCUMENT_ROOT=/app \
 
 ENV WEB_PHP_SOCKET=127.0.0.1:9000
 
-
-COPY conf/ /opt/docker/
-
 RUN set -x \
     && apk-install \
     nginx \
@@ -86,6 +83,9 @@ RUN set -x \
     && docker-service enable cron \
     && docker-run-bootstrap \
     && docker-image-cleanup
+
+
+COPY conf/ /opt/docker/
 
 EXPOSE 9000
 EXPOSE 80 443
