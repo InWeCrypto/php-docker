@@ -2,6 +2,8 @@ FROM richarvey/nginx-php-fpm:1.5.0
 
 LABEL MAINTAINER support@inwecrypto.com
 
+COPY conf/nginx-site.conf /etc/nginx/sites-available/default.conf
+
 RUN set -ex \
     && apk del openssl-dev \
     && apk --no-cache add postgresql-dev
