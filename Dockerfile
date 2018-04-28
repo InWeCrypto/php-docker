@@ -1,4 +1,4 @@
-FROM richarvey/nginx-php-fpm:1.5.0
+FROM daocloud.io/inwecrypto/nginx-php-fpm:master-0e023f4
 
 LABEL MAINTAINER support@inwecrypto.com
 
